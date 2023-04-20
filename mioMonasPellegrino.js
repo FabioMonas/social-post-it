@@ -29,11 +29,11 @@ function appendArrayJSON(percorsoFile, fileJSON, req) {
   length = Object.keys(fileJSON).length;
 
   for (var i = 0; i < length; i++) {
-    file += '{ "Nome": "' + fileJSON[i].Nome + '", "Nickname": "' + fileJSON[i].Nickname + '", "Età": "' + fileJSON[i].Punti + '"},\n';
+    file += '{ "Nome": "' + fileJSON[i].Nome + '", "Nickname": "' + fileJSON[i].Nickname + '", "Età": "' + fileJSON[i].Età + '"},\n';
   }
   file += '{ "Nome": "' + req.body.Nome
     + '", "Nickname": "' + req.body.Nickname
-    + '", "Età": "' + req.body.Punti + '"}\n';
+    + '", "Età": "' + req.body.Età + '"}\n';
   file += "]";
   scriviFile(percorsoFile, file);
 }
